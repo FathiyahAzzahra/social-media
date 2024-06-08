@@ -49,6 +49,11 @@ Route::prefix('password-reset')->group(function () {
     Route::post('/reset', [PasswordResetController::class, 'reset'])->name('password.update');
 });
 
+// Profile routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+});
+
 // Follower routes
 Route::prefix('followers')->group(function () {
     Route::post('/{user}', [FollowerController::class, 'follow'])->name('followers.follow');

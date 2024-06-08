@@ -20,15 +20,14 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Membuat teks menjadi tengah */
         }
 
         h1 {
-            text-align: center;
             color: #444;
         }
 
         h2 {
-            text-align: center;
             color: #555;
         }
 
@@ -53,11 +52,7 @@
             align-items: center;
         }
 
-<<<<<<< HEAD
         input[type="text"], input[type="email"], input[type="password"] {
-=======
-        input[type="text"], input[type="password"] {
->>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
             margin: 10px 0;
             padding: 10px;
             width: 100%;
@@ -78,24 +73,19 @@
         button:hover {
             background-color: #218838;
         }
-<<<<<<< HEAD
 
         .form-container {
             display: none;
         }
-=======
->>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>Chatter</h1>
         <h2>Welcome to Our Social Media</h2>
-<<<<<<< HEAD
         <p>Apakah kamu sudah memiliki akun?</p>
-        <a href="#register" onclick="showForm('register')">Register</a>
-        <a href="#login" onclick="showForm('login')">Login</a>
+        <p>Jika sudah, <a href="#login" onclick="showForm('login')">login</a></p>
+        <p>Jika belum, <a href="#register" onclick="showForm('register')">register</a></p>
 
         <div id="register" class="form-container">
             <h2>Register</h2>
@@ -148,11 +138,5 @@
             document.getElementById(formId).style.display = 'block';
         }
     </script>
-=======
-        <p>apakah kamu sudah memiliki akun? </p>
-        <a href="register.php">Register</a>
-        <a href="login.php">Login</a>
-    </div>
->>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
 </body>
 </html>
