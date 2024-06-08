@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\PasswordResetController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LikeController;
@@ -18,6 +21,17 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('loginpage');
 });
+
+// Registration Routes
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+// Login Routes
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+
+// Password Reset Routes
+Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('/password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 // User routes
 Route::prefix('users')->group(function () {
