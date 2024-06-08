@@ -18,20 +18,17 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+
 Route::get('/login', function () {
     return view('loginpage');
 });
 
-// Registration Routes
-Route::post('/register', [RegisterController::class, 'register'])->name('register');
+// route register
+use App\Http\Controllers\AuthController;
 
-// Login Routes
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
 
-// Password Reset Routes
-Route::post('/password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-Route::get('/password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-Route::post('/password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 
 // User routes
 Route::prefix('users')->group(function () {
