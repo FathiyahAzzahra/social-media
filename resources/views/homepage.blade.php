@@ -53,7 +53,11 @@
             align-items: center;
         }
 
+<<<<<<< HEAD
         input[type="text"], input[type="email"], input[type="password"] {
+=======
+        input[type="text"], input[type="password"] {
+>>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
             margin: 10px 0;
             padding: 10px;
             width: 100%;
@@ -74,16 +78,21 @@
         button:hover {
             background-color: #218838;
         }
+<<<<<<< HEAD
 
         .form-container {
             display: none;
         }
+=======
+>>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Chatter</h1>
         <h2>Welcome to Our Social Media</h2>
+<<<<<<< HEAD
         <p>Apakah kamu sudah memiliki akun?</p>
         <a href="#register" onclick="showForm('register')">Register</a>
         <a href="#login" onclick="showForm('login')">Login</a>
@@ -139,5 +148,11 @@
             document.getElementById(formId).style.display = 'block';
         }
     </script>
+=======
+        <p>apakah kamu sudah memiliki akun? </p>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
+    </div>
+>>>>>>> ac7478b9d87a2d3021d7eac860dc93b057483006
 </body>
 </html>
