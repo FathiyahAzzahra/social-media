@@ -6,8 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Tester</h1>
-    <form action=""><input type="text">hdasdasai</form>
+    <h1>Registration</h1>
+    <h2>Doesn't have account? Please sign up your account here</h2> 
+    <form action=""><input type="text">Email</form>
 </body>
 </html>
 
